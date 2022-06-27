@@ -1,4 +1,4 @@
-import home1 from "../img/home1.png"
+import home1 from "../img/home1.png";
 
 const AboutSection = () => {
   return (
