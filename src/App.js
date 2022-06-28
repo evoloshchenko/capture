@@ -2,12 +2,14 @@
 import GlobalStyle from "./component/GlobalStyle";
 //Import Pages
 import AboutUs from "./pages/AboutUs";
+import Nav from "./component/Nav";
 
 function App() {
   return (
     <div className="App">
-      <AboutUs />
       <GlobalStyle />
+      <Nav />
+      <AboutUs />
     </div>
   );
 }
