@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MovieState } from "../pages/MovieState";
 import { useLocation } from "react-router-dom";
+//Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animation";
 
 const MovieDetail = () => {
   //   const navigate = useNavigate();
@@ -25,7 +28,12 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Details>
+        <Details
+          exit="exit"
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -49,7 +57,7 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 

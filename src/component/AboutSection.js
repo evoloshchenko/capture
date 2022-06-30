@@ -1,13 +1,21 @@
 import home1 from "../img/home1.png";
 //Styled
-import styled from "styled-components";
-import {About, Image, Description, Hide} from "../styles";
+import { About, Image, Description, Hide } from "../styles";
+//Framer Motion
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
+  //Setting the animation varients
+  const titleAnimation = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 2 } },
+  };
+  const container = {};
+
   return (
     <About>
       <Description>
-        <div className="title">
+        <div>
           <Hide>
             <h2>We work to make</h2>
           </Hide>
@@ -34,6 +42,5 @@ const AboutSection = () => {
 };
 
 //Styled Components
-
 
 export default AboutSection;
