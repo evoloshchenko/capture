@@ -4,14 +4,20 @@ import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
+//Test
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 //Styles
 import { About, Image, Description } from "../styles";
 import styled from "styled-components";
+import { fade } from "../Animation";
+import { UseScroll } from "./UseScroll";
 
 const ServicesSection = () => {
+  const [element, controls] = UseScroll();
   return (
-    <Services>
+    <Services variants={fade} animate={controls} initial="hidden" ref={element}>
       <Description>
         <h2>
           Hi <span>quality</span> services
@@ -74,7 +80,7 @@ const Card = styled.div`
   .icon {
     display: flex;
     align-items: center;
-    h3{
+    h3 {
       margin-left: 1rem;
       background: white;
       color: black;
