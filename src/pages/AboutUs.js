@@ -16,9 +16,9 @@ const AboutUs = () => {
       initial="hidden"
       animate="show"
     >
-      <AboutSection />;
-      <ServicesSection />;
-      <FaqSection />;
+      <AboutSection />
+      <ServicesSection />
+      <FaqSection />
       <ScrollTop />
     </motion.div>
   );
