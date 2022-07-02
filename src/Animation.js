@@ -71,3 +71,11 @@ export const reveal = {
     },
   },
 };
+
+export const swoop = {
+  hidden: { width: "0%", transition: {duration: 1} },
+  show: {
+    width: "100%",
+    transition: { ease: "easeOut", duration: 1 },
+  },
+};
