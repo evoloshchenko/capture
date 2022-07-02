@@ -14,7 +14,7 @@ const ContactUs = () => {
     >
       <Title>
         <Hide>
-          <motion.h2 variants={titleAnimation}> Get in touch.</motion.h2>
+          <motion.h2 variants={titleAnimation}> Get in touch</motion.h2>
         </Hide>
       </Title>
       <div>
@@ -50,6 +50,10 @@ const ContactStyle = styled(motion.div)`
 const Title = styled.div`
   margin-bottom: 4rem;
   color: black;
+  h2{
+    font-size: 3rem;
+    font-weight: bold;
+  }
 `;
 
 const Hide = styled.div`
@@ -67,6 +71,7 @@ const Social = styled(motion.div)`
   align-items: center;
   h2 {
     margin: 2rem;
+    font-size: 1.5rem;
   }
 `;
 
